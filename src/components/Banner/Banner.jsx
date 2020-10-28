@@ -12,7 +12,7 @@ const Banner = ({ titleFirst, titleSecond, info, children }) => {
           <span className="banner__title--second">{titleSecond}</span>
         </h1>
         <p className="banner__info">{info}</p>
-        {children}
+        <div className="banner__buttons">{children}</div>
       </div>
     </div>
   )

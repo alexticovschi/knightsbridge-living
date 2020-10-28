@@ -23,19 +23,37 @@ const HomePage = ({ data }) => {
             info="London Knightsbridge is a place to relax and be entertained right on your door step - 10 minutes from Central London"
           >
             <Link
-              fade
               to="/knightsbridge"
               className="btn-primary banner__btn-primary"
             >
               Discover
             </Link>
-            <Link fade to="/buildings" className="btn-white">
+            <Link to="/buildings" className="btn-white">
               View Buildings
             </Link>
           </Banner>
         </StyledHero>
         <Benefits />
         <Buildings />
+        <StyledHero
+          marginTop="true"
+          opacity="true"
+          img={data.homeHeroImage2.childImageSharp.fluid}
+        >
+          <Banner
+            className="banner"
+            titleFirst="Rent your home"
+            titleSecond="in Knightsbridge"
+            info="From stylish gardens to roof terraces and gyms, we’ve created social spaces for residents to enjoy."
+          >
+            <Link to="/" className="btn-primary banner__btn-primary">
+              Find a Home
+            </Link>
+            <Link to="/" className="btn-white">
+              Book a Viewing
+            </Link>
+          </Banner>
+        </StyledHero>
       </Layout>
     </main>
   )
@@ -44,6 +62,13 @@ const HomePage = ({ data }) => {
 export const query = graphql`
   query {
     homeHeroImage: file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4140) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    homeHeroImage2: file(relativePath: { eq: "hero2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4140) {
           ...GatsbyImageSharpFluid_withWebp

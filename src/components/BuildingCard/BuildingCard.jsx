@@ -16,7 +16,7 @@ const BuildingCard = ({ building }) => {
         />
         <div className="building-card__overlay">
           <h3 className="building-card__name">{title}</h3>
-          <div className="building-card__features">
+          <div className="building-card__intro-container">
             <p className="building-card__intro">{intro}</p>
           </div>
         </div>

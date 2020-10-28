@@ -34,7 +34,6 @@ const getBuildings = graphql`
 const Buildings = () => {
   const response = useStaticQuery(getBuildings)
   const buildings = response.buildings.edges
-  console.log(response)
 
   return (
     <section className="buildings-container mt">
@@ -46,7 +45,7 @@ const Buildings = () => {
       <div className="grid-container">
         <div className="buildings">
           {buildings.map(({ node }) => (
-            <BuildingCard key={node.contentful_id} building={node} />
+            <BuildingCard key={node.id} building={node} />
           ))}
         </div>
       </div>

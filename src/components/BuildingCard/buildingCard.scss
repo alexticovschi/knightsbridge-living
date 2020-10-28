@@ -9,7 +9,7 @@
       height: 35rem;
     }
 
-    &:hover > .building-card__overlay > .building-card__features {
+    &:hover > .building-card__overlay > .building-card__intro-container {
       max-height: 60rem;
     }
 
@@ -61,7 +61,7 @@
     }
   }
 
-  &__features {
+  &__intro-container {
     max-height: 0;
     overflow: hidden;
     transition: max-height ease 1s;
