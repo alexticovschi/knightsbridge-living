@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,900&display=swap");
+
+@font-face {
+  font-family: "ITC Avant Garde";
+  src: url("../../fonts/itc-avant-garde-gothic/ITCAvantGardeStdBk.woff");
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Bold";
+  src: url("../../fonts/itc-avant-garde-gothic/ITCAvantGardeStdBold.woff");
+}
+
+:root {
+  --primaryColor: #cc4030;
+  --primaryColor2: #0ba889;
+  --primaryColorLight: #ccfff5;
+  --orangeRedColor: #ec5a4a;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #e7e7e7;
+  --lightGrey: #858585;
+  --darkGrey: #484848;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 1.5px;
+  --mainBorderRadius: 0.6rem;
+  --mainBoxShadow: 0 1px 10px 0 rgba(0, 0, 0, 0.06),
+    0 -1px 2px rgba(3, 54, 63, 0.04);
+  --mainFont: "ITC Avant Garde";
+  --mainFontBold: "ITC Avant Garde Bold", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5%;
+
+  /* Scrollbar styles */
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--lightGrey);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaryColor) 60%,
+      #414141
+    );
+    outline: 1px solid var(--lightGrey);
+  }
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: var(--mainFont), sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.4;
+  margin-top: 66px;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mainFont);
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  font-size: 2.8rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+a {
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-family: var(--mainFont);
+  color: var(--darkGrey);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 17.6rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 2rem;
+  }
+}
+
+.btn-white {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  background-color: var(--mainWhite);
+  border: 2px solid var(--mainWhite);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.9rem 1.5rem;
+  font-size: 1.4rem;
+  font-family: var(--mainFont);
+  font-weight: 900;
+
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  z-index: 100;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 1.2rem;
+  }
+}
+
+.btn-primary {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: 2px solid var(--primaryColor);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.9rem 1.5rem;
+  font-size: 1.5rem;
+  font-family: var(--mainFont);
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  z-index: 100;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 1.2rem;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  @media screen and (min-width: 750px) {
+    margin-top: 13rem;
+  }
+
+  margin-top: 5rem;
+}
+
+.error {
+  background: var(--primaryColor);
+  min-height: calc(100vh - 62px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt {
+  @media screen and (min-width: 750px) {
+    margin-top: 13rem;
+  }
+
+  margin-top: 5rem;
+}

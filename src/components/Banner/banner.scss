@@ -1,0 +1,61 @@
+.banner {
+  text-align: left;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+
+  grid-column: center-start / center-end;
+  margin-top: -30rem;
+  padding: 0 1rem;
+
+  &__btn-primary {
+    margin-right: 2rem;
+  }
+
+  &__title {
+    font-family: var(--mainFontBold);
+    font-size: 3rem;
+    line-height: 4.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: var(--mainSpacing);
+
+    &--first {
+      display: block;
+      margin-bottom: -3rem;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    font-family: var(--mainFont);
+    font-size: 1.7rem;
+    margin-bottom: 5rem;
+    color: var(--mainWhite);
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 95%;
+
+    &__title {
+      font-size: 6rem;
+    }
+
+    &__info {
+      font-family: var(--mainFont);
+      font-weight: 500;
+      line-height: 2.7rem;
+      width: 70%;
+      font-size: 1.7rem;
+    }
+  }
+
+  @media screen and (min-width: 1026px) {
+    &__title {
+      font-size: 4.8rem;
+    }
+  }
+}
