@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
 import Benefits from "../components/Benefits/Benefits"
+import Buildings from "../components/Buildings/Buildings"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -34,6 +35,7 @@ const HomePage = ({ data }) => {
           </Banner>
         </StyledHero>
         <Benefits />
+        <Buildings />
       </Layout>
     </main>
   )
