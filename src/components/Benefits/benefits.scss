@@ -1,0 +1,73 @@
+.benefits {
+  grid-column: center-start / center-end;
+
+  @media only screen and (max-width: 550px) {
+    grid-column: full-start / full-end;
+  }
+
+  &__list {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.6rem;
+
+    @media screen and (max-width: 1050px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 4rem;
+    }
+
+    @media only screen and (max-width: 550px) {
+      grid-template-columns: 1fr;
+      margin-top: 2rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-items: left;
+
+    @media only screen and (max-width: 550px) {
+      justify-items: center;
+    }
+  }
+
+  &__icon {
+    height: 6rem;
+    margin-left: 2rem;
+
+    @media only screen and (max-width: 900px) {
+      height: 6rem;
+    }
+    @media only screen and (max-width: 900px) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    align-self: center;
+    text-align: center;
+    font-family: var(--mainFontBold);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--darkColor);
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 550px) {
+      text-align: center;
+    }
+  }
+}

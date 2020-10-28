@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
+import Benefits from "../components/Benefits/Benefits"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -32,6 +33,7 @@ const HomePage = ({ data }) => {
             </Link>
           </Banner>
         </StyledHero>
+        <Benefits />
       </Layout>
     </main>
   )
