@@ -4,6 +4,7 @@ import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
 import Benefits from "../components/Benefits/Benefits"
 import Buildings from "../components/Buildings/Buildings"
+import Reviews from "../components/Reviews/Reviews"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -54,6 +55,7 @@ const HomePage = ({ data }) => {
             </Link>
           </Banner>
         </StyledHero>
+        <Reviews />
       </Layout>
     </main>
   )

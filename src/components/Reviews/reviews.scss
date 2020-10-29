@@ -1,0 +1,41 @@
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: full-start / full-end;
+  height: auto;
+
+  @media only screen and (max-width: 500px) {
+    grid-column: full-start / full-end;
+  }
+
+  &__residents {
+    grid-column: 1 / span 1;
+    background-color: var(--primaryColor);
+    height: 50rem;
+    width: 120%;
+    padding: 8rem 8rem 8rem 8rem;
+    z-index: 10;
+
+    &__title {
+      font-size: 2.5rem;
+      font-family: var(--mainFontBold);
+      color: var(--mainWhite);
+    }
+    &__text {
+      color: var(--mainWhite);
+      font-size: 1.7rem;
+      width: 75%;
+    }
+  }
+
+  &__slider-container {
+    background-color: var(--mainGrey);
+    display: grid;
+    grid-column: 2 / -1;
+    padding-bottom: 5rem;
+  }
+
+  &__img-wrapper {
+    position: relative;
+  }
+}
