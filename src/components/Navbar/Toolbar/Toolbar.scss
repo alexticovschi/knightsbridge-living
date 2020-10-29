@@ -21,7 +21,6 @@
   &__logo {
     a {
       text-decoration: none;
-      // font-family: "ITC Avant Garde";
       font-weight: 900;
       color: var(--darkColor);
       text-transform: uppercase;
@@ -30,9 +29,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      letter-spacing: 3px;
     }
 
     &--first {
+      font-family: var(--mainFontBold);
       font-size: 2.6rem;
     }
     &--second {
