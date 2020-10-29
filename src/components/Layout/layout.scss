@@ -36,21 +36,12 @@ html {
 
   /* Scrollbar styles */
   &::-webkit-scrollbar {
-    width: 0.8rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: var(--lightGrey);
+    width: 1.4rem;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background-image: linear-gradient(
-      to bottom,
-      var(--primaryColor) 60%,
-      #414141
-    );
-    outline: 1px solid var(--lightGrey);
+    background-color: var(--primaryColor);
   }
 }
 
