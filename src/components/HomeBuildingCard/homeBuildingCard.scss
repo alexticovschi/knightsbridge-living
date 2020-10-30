@@ -1,47 +1,49 @@
-.building-card {
+.home-building-card {
   &__img-wrapper {
-    height: 36rem;
+    height: 28rem;
     width: 100%;
     position: relative;
     transition: color ease 0.5s;
 
-    @media screen and (max-width: 768px) {
-      height: 40rem;
+    @media screen and (max-width: 765px) {
+      height: 30rem;
 
-      .building-card__overlay > .building-card__intro-container {
+      .home-building-card__overlay > .home-building-card__intro-container {
         max-height: 60rem;
       }
-      .building-card__overlay {
+      .home-building-card__overlay {
         background-color: var(--mainWhite);
         color: var(--darkGrey);
       }
-      .building-card__overlay > .building-card__name {
+      .home-building-card__overlay > .home-building-card__name {
         color: var(--primaryColor);
       }
-      .building-card__overlay
-        > .building-card__intro-container
-        .building-card__intro {
+      .home-building-card__overlay
+        > .home-building-card__intro-container
+        .home-building-card__intro {
         color: var(--mainBlack);
         opacity: 1;
       }
     }
 
-    &:hover > .building-card__overlay > .building-card__intro-container {
+    &:hover
+      > .home-building-card__overlay
+      > .home-building-card__intro-container {
       max-height: 60rem;
     }
 
-    &:hover > .building-card__overlay {
+    &:hover > .home-building-card__overlay {
       background-color: var(--mainWhite);
       color: var(--darkGrey);
     }
 
-    &:hover > .building-card__overlay > .building-card__name {
+    &:hover > .home-building-card__overlay > .home-building-card__name {
       color: var(--primaryColor);
     }
     &:hover
-      > .building-card__overlay
-      > .building-card__intro-container
-      .building-card__intro {
+      > .home-building-card__overlay
+      > .home-building-card__intro-container
+      .home-building-card__intro {
       color: var(--mainBlack);
       opacity: 1;
     }
@@ -66,10 +68,6 @@
     transition: background-color ease 0.4s;
     box-shadow: 3px 8px 20px 0 rgba(209, 209, 209, 0.5);
 
-    @media screen and (max-width: 768px) {
-      padding: 1.4rem;
-    }
-
     &:before {
       content: "";
       position: absolute;
@@ -84,7 +82,7 @@
   &__name {
     color: var(--mainWhite);
     font-family: var(--mainFontBold);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     padding-top: 0.5rem;
     margin-bottom: 0rem;
@@ -92,9 +90,8 @@
     transition: color ease 0.4s;
 
     @media screen and (max-width: 765px) {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
-
     @media screen and (max-width: 550px) {
       text-align: center;
     }
@@ -114,24 +111,12 @@
     font-size: 1.3rem;
     text-align: left;
     padding-top: 1rem;
-    transition: color ease 0.4s;
-    transition: opacity ease 0.4s;
-    opacity: 0;
     color: var(--mainWhite);
+    transition: color ease 0.4s;
+    opacity: 0;
 
     @media screen and (max-width: 550px) {
       font-size: 1.2rem;
-      text-align: center;
-    }
-  }
-
-  &__offer-title {
-    padding-top: 1rem;
-    font-size: 1.4rem;
-    font-family: var(--mainFontBold);
-
-    @media screen and (max-width: 550px) {
-      font-size: 1.3rem;
       text-align: center;
     }
   }

@@ -1,12 +1,33 @@
-import React from 'react';
+import React from "react"
 import Layout from "../components/Layout/Layout"
+import BuildingsList from "../components/BuildingsList/BuildingsList"
+import BuildingsStyledHero from "../components/BuildingsStyledHero"
 
-const Buildings = () => {
+import { graphql } from "gatsby"
+
+export const query = graphql`
+  query {
+    buildingsHeroImage: file(relativePath: { eq: "buildings-hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4140) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
+const Buildings = ({ data }) => {
   return (
     <Layout>
-      BUILDINGS PAGE
+      <BuildingsStyledHero
+        home="true"
+        opacity="true"
+        img={data.buildingsHeroImage.childImageSharp.fluid}
+      ></BuildingsStyledHero>
+      <BuildingsList />
     </Layout>
-  );
-};
+  )
+}
 
-export default Buildings;
+export default Buildings

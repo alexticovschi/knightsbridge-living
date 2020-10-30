@@ -1,0 +1,52 @@
+.buildings-list {
+  &__intro {
+    grid-column: center-start / center-end;
+    background-color: var(--mainWhite);
+    margin-top: -10rem;
+    z-index: 100;
+
+    @media (min-width: 992px) {
+      padding: 10px 110px 0;
+    }
+
+    @media (max-width: 550px) {
+      grid-column: full-start / full-end;
+    }
+
+    &-title,
+    &-text {
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-family: var(--mainFontBold);
+      text-transform: uppercase;
+      padding: 2.8rem 0 3rem;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__buildings-container {
+    grid-column: center-start / center-end;
+
+    @media (max-width: 550px) {
+      grid-column: full-start / full-end;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    grid-row-gap: 6rem;
+
+    margin-top: 3rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

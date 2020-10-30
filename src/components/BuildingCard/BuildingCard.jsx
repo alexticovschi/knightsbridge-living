@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 import "./buildingCard.scss"
 
 const BuildingCard = ({ building }) => {
-  const { title, intro, slug, image } = building
+  const { title, offer, longIntro, slug, image } = building
+  console.log(longIntro)
 
   return (
     <Link to={`/${slug}`} className="building-card">
@@ -17,7 +18,11 @@ const BuildingCard = ({ building }) => {
         <div className="building-card__overlay">
           <h3 className="building-card__name">{title}</h3>
           <div className="building-card__intro-container">
-            <p className="building-card__intro">{intro}</p>
+            <h2 className="building-card__offer-title">{offer}</h2>
+            <p className="building-card__intro">
+              {longIntro ? longIntro.internal.content : ""}
+            </p>
+            <strong className="building-card__link">Find out more</strong>
           </div>
         </div>
       </figure>

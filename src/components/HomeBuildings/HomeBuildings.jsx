@@ -1,13 +1,13 @@
 import React from "react"
 import Title from "../Title/Title"
-import BuildingCard from "../BuildingCard/BuildingCard"
+import HomeBuildingCard from "../HomeBuildingCard/HomeBuildingCard"
 import { useStaticQuery, graphql } from "gatsby"
 
-import "./buildings.scss"
+import "./homeBuildings.scss"
 
-const getBuildings = graphql`
+const getHomeBuildings = graphql`
   {
-    buildings: allContentfulBuilding {
+    homeBuildings: allContentfulBuilding {
       edges {
         node {
           id
@@ -31,21 +31,21 @@ const getBuildings = graphql`
   }
 `
 
-const Buildings = () => {
-  const response = useStaticQuery(getBuildings)
-  const buildings = response.buildings.edges
+const HomeBuildings = () => {
+  const response = useStaticQuery(getHomeBuildings)
+  const buildings = response.homeBuildings.edges
 
   return (
-    <section className="buildings-container mt">
+    <section className="home-buildings-container mt">
       <Title
         title="Choose your building in Knightsbridge"
         subtitle="Each Knightsbridge Living building has its own unique personality and design - which one's right for you?
 "
       />
       <div className="grid-container">
-        <div className="buildings">
+        <div className="home-buildings">
           {buildings.map(({ node }) => (
-            <BuildingCard key={node.id} building={node} />
+            <HomeBuildingCard key={node.id} building={node} />
           ))}
         </div>
       </div>
@@ -53,4 +53,4 @@ const Buildings = () => {
   )
 }
 
-export default Buildings
+export default HomeBuildings
