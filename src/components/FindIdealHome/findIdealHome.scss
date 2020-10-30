@@ -84,7 +84,6 @@
       position: absolute;
       bottom: -3rem;
       width: 88%;
-      margin-left: 6%;
       margin-top: 6%;
       padding: 2rem 3rem 2rem 3rem;
       background-color: var(--mainWhite);
@@ -93,6 +92,10 @@
 
       @media screen and (max-width: 768px) {
         padding: 1.4rem;
+      }
+
+      @media screen and (max-width: 550px) {
+        margin-left: 0;
       }
 
       &:before {
