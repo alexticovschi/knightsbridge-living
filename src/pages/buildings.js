@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import BuildingsList from "../components/BuildingsList/BuildingsList"
+import FindIdealHome from "../components/FindIdealHome/FindIdealHome"
 import BuildingsStyledHero from "../components/BuildingsStyledHero"
 
 import { graphql } from "gatsby"
@@ -26,6 +27,7 @@ const Buildings = ({ data }) => {
         img={data.buildingsHeroImage.childImageSharp.fluid}
       ></BuildingsStyledHero>
       <BuildingsList />
+      <FindIdealHome />
     </Layout>
   )
 }

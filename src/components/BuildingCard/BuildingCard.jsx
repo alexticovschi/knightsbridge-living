@@ -5,7 +5,6 @@ import "./buildingCard.scss"
 
 const BuildingCard = ({ building }) => {
   const { title, offer, longIntro, slug, image } = building
-  console.log(longIntro)
 
   return (
     <Link to={`/${slug}`} className="building-card">
