@@ -30,6 +30,7 @@ const settings = {
         slidesToScroll: 1,
         initialSlide: 2,
         arrows: false,
+        dots: true,
       },
     },
     {
