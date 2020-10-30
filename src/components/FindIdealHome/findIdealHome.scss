@@ -73,6 +73,11 @@
       object-fit: cover;
       display: block;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        width: 16rem;
+        height: 16rem;
+      }
     }
 
     &__overlay {

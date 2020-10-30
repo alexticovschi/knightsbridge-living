@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
-const BuildingsStyledHero = ({ img, className, children, home }) => {
+const BuildingsStyledHero = ({ img, className, children, buildings }) => {
   return (
     <>
-      <BackgroundImage className={className} fluid={img} home={home}>
+      <BackgroundImage className={className} fluid={img} buildings={buildings}>
         {children}
       </BackgroundImage>
     </>
@@ -13,7 +13,7 @@ const BuildingsStyledHero = ({ img, className, children, home }) => {
 }
 
 export default styled(BuildingsStyledHero)`
-  min-height: 20vh;
+  min-height: ${props => (props.buildings ? "calc(25vh - 66px)" : "80vh")};
   background: ${props =>
     props.opacity
       ? "linear-gradient(to bottom right,rgb(40, 43, 42), rgba(0, 0, 0, 0.01))"

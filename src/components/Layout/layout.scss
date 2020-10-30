@@ -174,14 +174,6 @@ main {
   flex-direction: column;
 }
 
-.wrapper {
-  @media screen and (min-width: 750px) {
-    margin-top: 13rem;
-  }
-
-  margin-top: 5rem;
-}
-
 .error {
   background: var(--primaryColor);
   min-height: calc(100vh - 62px);
@@ -195,5 +187,5 @@ main {
     margin-top: 10rem;
   }
 
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
