@@ -1,0 +1,146 @@
+.transport-and-connections {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column: center-start / center-end;
+  position: relative;
+  margin-bottom: 5rem;
+
+  @media only screen and (max-width: 950px) {
+    margin-bottom: 60rem;
+    grid-template-rows: 1fr;
+  }
+
+  @media only screen and (max-width: 550px) {
+    grid-column: full-start / full-end;
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    grid-row: 1;
+    color: var(--primaryColor);
+    font-family: var(--mainFontBold);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  &__info {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+  }
+
+  &__list {
+    grid-row: 4;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    @media only screen and (max-width: 950px) {
+      flex-direction: column;
+      margin-left: -8rem;
+      margin-top: -2rem;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    text-decoration: none;
+    list-style-type: none;
+    width: 30px;
+    height: 30px;
+    border: 5px solid var(--primaryColor);
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 90px;
+
+    @media only screen and (max-width: 950px) {
+      display: block;
+      margin-top: 52px;
+      margin-right: 0;
+      width: 31px;
+    }
+
+    &:hover {
+      background-color: var(--mainBlack);
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 95px;
+      border-top: 5px solid var(--primaryColor);
+      border-bottom: 5px solid var(--primaryColor);
+      height: 5px;
+      margin-left: 21px;
+      margin-top: 5px;
+
+      @media only screen and (max-width: 950px) {
+        transform: rotate(90deg);
+        margin-left: -16px;
+        margin-top: 45px !important;
+        width: 55px;
+      }
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    color: var(--mainBlack);
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
+
+    @media only screen and (max-width: 950px) {
+      left: 70px;
+      top: -4px;
+      flex-direction: row;
+      display: inline-block;
+      font-size: 1.8rem;
+    }
+
+    span {
+      display: block;
+      width: 10rem;
+
+      &:nth-of-type(2) {
+        font-family: var(--mainFontBold);
+
+        @media only screen and (max-width: 950px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &.knightsbridge {
+      color: var(--primaryColor);
+      font-family: var(--mainFontBold);
+      font-size: 1.6rem;
+      margin-left: -10px;
+
+      @media only screen and (max-width: 950px) {
+        margin-left: 0;
+        font-size: 2rem;
+      }
+    }
+  }
+}
