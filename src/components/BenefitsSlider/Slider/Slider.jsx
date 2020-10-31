@@ -2,12 +2,13 @@ import React from "react"
 import Slider from "react-slick"
 import SliderCard from "../SliderCard/SliderCard"
 import { useStaticQuery, graphql } from "gatsby"
-import "../../../node_modules/slick-carousel/slick/slick.css"
-import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import "./slider.scss"
 
 const settings = {
-  dots: false,
+  dots: true,
+  // arrows: false,
   autoplaySpeed: 3000,
   speed: 1000,
   slidesToShow: 3,
@@ -26,7 +27,7 @@ const settings = {
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         initialSlide: 2,
         arrows: false,
@@ -46,20 +47,19 @@ const settings = {
   ],
 }
 
-const getReviews = graphql`
+const getBenefits = graphql`
   {
-    reviews: allContentfulReviews {
+    benefits: allContentfulBenefits {
       edges {
         node {
           id
-          label
           title
           content {
             content
           }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
+          icon {
+            file {
+              url
             }
           }
         }
@@ -69,13 +69,15 @@ const getReviews = graphql`
 `
 
 const MySlider = () => {
-  const response = useStaticQuery(getReviews)
-  const reviews = response.reviews.edges
+  const response = useStaticQuery(getBenefits)
+  const benefits = response.benefits.edges
+
+  console.log(benefits)
 
   return (
     <Slider {...settings} className="sldr mt">
-      {reviews.map(({ node }) => (
-        <SliderCard key={node.title} review={node} />
+      {benefits.map(({ node }) => (
+        <SliderCard key={node.id} benefit={node} />
       ))}
     </Slider>
   )

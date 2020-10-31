@@ -1,0 +1,57 @@
+.benefit-slider-card {
+  &__img-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 10rem;
+  }
+  &__item {
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-items: left;
+    padding: 0 3rem;
+    margin-left: 5rem;
+
+    @media only screen and (max-width: 768px) {
+      justify-items: center;
+      margin-left: 0;
+    }
+  }
+
+  &__icon {
+    height: 6rem;
+    text-align: right;
+
+    @media only screen and (max-width: 900px) {
+      height: 6rem;
+    }
+    @media only screen and (max-width: 900px) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    align-self: center;
+    // text-align: center;
+    font-family: var(--mainFontBold);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--darkColor);
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    padding-right: 1.4rem;
+    @media only screen and (max-width: 550px) {
+      text-align: center;
+    }
+  }
+}

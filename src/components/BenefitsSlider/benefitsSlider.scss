@@ -1,0 +1,38 @@
+.section-benefits-slider {
+  &__title {
+    grid-column: center-start / center-end;
+    text-align: center;
+    margin-bottom: -4rem;
+    color: var(--primaryColor);
+    font-weight: 500;
+
+    span {
+      font-family: var(--mainFontBold);
+    }
+
+    @media only screen and (max-width: 550px) {
+      grid-column: full-start / full-end;
+    }
+  }
+
+  &__btn-primary {
+    grid-column: center-start / center-end;
+    text-align: center;
+
+    width: 15rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+  }
+
+  .benefits-slider {
+    grid-column: center-start / center-end;
+
+    @media only screen and (max-width: 550px) {
+      grid-column: full-start / full-end;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1.6rem;
+  }
+}

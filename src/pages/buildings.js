@@ -4,6 +4,7 @@ import BuildingsStyledHero from "../components/BuildingsStyledHero"
 import BuildingsList from "../components/BuildingsList/BuildingsList"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
+import BenefitsSlider from "../components/BenefitsSlider/BenefitsSlider"
 import FindIdealHome from "../components/FindIdealHome/FindIdealHome"
 import { Link } from "gatsby"
 
@@ -56,6 +57,7 @@ const Buildings = ({ data }) => {
           </Link>
         </Banner>
       </StyledHero>
+      <BenefitsSlider />
     </Layout>
   )
 }
