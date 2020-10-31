@@ -7,6 +7,8 @@ import Banner from "../components/Banner/Banner"
 import BenefitsSlider from "../components/BenefitsSlider/BenefitsSlider"
 import FindIdealHome from "../components/FindIdealHome/FindIdealHome"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
+import Directions from "../components/Directions/Directions"
+
 import { Link } from "gatsby"
 
 import { graphql } from "gatsby"
@@ -60,6 +62,7 @@ const Buildings = ({ data }) => {
       </StyledHero>
       <BenefitsSlider />
       <TransportAndConnections />
+      <Directions />
     </Layout>
   )
 }

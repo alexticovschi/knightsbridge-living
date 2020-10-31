@@ -14,10 +14,10 @@ const TransportAndConnections = () => {
       <div className="grid-container">
         <ul className="transport-and-connections__list">
           <li className="transport-and-connections__list-item">
-            <a className="transport-and-connections__link" href="">
+            <div className="transport-and-connections__link">
               <span>South</span>
               <span>Kensington</span>
-            </a>
+            </div>
           </li>
           <li className="transport-and-connections__list-item">
             <div className="transport-and-connections__link knightsbridge">
