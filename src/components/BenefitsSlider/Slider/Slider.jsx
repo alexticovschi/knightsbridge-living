@@ -72,8 +72,6 @@ const MySlider = () => {
   const response = useStaticQuery(getBenefits)
   const benefits = response.benefits.edges
 
-  console.log(benefits)
-
   return (
     <Slider {...settings} className="sldr mt">
       {benefits.map(({ node }) => (
