@@ -7,7 +7,7 @@ const BuildingCard = ({ building }) => {
   const { title, offer, longIntro, slug, image } = building
 
   return (
-    <Link to={`/${slug}`} className="building-card">
+    <Link to={`/buildings/${slug}`} className="building-card">
       <figure className="building-card__img-wrapper">
         <Image
           fluid={image.fluid}
