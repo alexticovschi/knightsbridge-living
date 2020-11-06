@@ -6,7 +6,6 @@ import Image from "gatsby-image"
 import "./buildingSlider.scss"
 
 const BuildingSlider = ({ building }) => {
-  console.log(building)
   const { title, description, images } = building
   const params = {
     pagination: {
@@ -35,7 +34,7 @@ const BuildingSlider = ({ building }) => {
               <Image
                 fluid={img.fluid}
                 className="swiper-slide__img"
-                alt="slider venue"
+                alt="slider image"
               />
             </figure>
             <div className="swiper-slide__box">

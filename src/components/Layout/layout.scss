@@ -11,7 +11,7 @@
 }
 
 :root {
-  --primaryColor: #cc4030;
+  --primaryColor: #b9382a;
   --primaryColor2: #0ba889;
   --primaryColorLight: #ccfff5;
   --orangeRedColor: #ec5a4a;
@@ -112,7 +112,7 @@ p {
     )
     [center-end] minmax(6rem, 1fr) [full-end];
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     padding: 0 2rem;
   }
 }

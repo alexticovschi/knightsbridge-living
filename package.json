@@ -31,6 +31,7 @@
     "react-id-swiper": "^2.4.0",
     "react-slick": "^0.27.12",
     "slick-carousel": "^1.8.1",
+    "slugify": "^1.4.6",
     "styled-components": "^5.2.0",
     "swiper": "^5.4.5"
   },
