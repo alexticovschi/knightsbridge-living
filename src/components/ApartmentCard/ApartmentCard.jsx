@@ -36,19 +36,20 @@ const ApartmentCard = ({ apartment }) => {
   }
 
   return (
-    <Link
-      to={`/apartments/${slug}/${nameSlugified}`}
-      className="apartment-card"
-    >
+    <div className="apartment-card">
       <Swiper className="apartment-card__slider" {...params}>
         {Object.values(images).map((img, i) => (
-          <figure key={i} className="apartment-card__slider-img-wrapper">
+          <Link
+            to={`/apartments/${slug}/${nameSlugified}`}
+            key={i}
+            className="apartment-card__slider-img-wrapper"
+          >
             <Image
               fluid={img.fluid}
               className="apartment-card__slider-img"
               alt="slider image"
             />
-          </figure>
+          </Link>
         ))}
       </Swiper>
       <div className="apartment-card__body">
@@ -83,7 +84,7 @@ const ApartmentCard = ({ apartment }) => {
           </Link>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 

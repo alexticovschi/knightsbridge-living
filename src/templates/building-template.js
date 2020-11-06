@@ -34,6 +34,7 @@ export const query = graphql`
     apartments: allContentfulApartment(filter: { slug: { eq: $slug } }) {
       edges {
         node {
+          id
           name
           numberOfBeds
           squareMeters

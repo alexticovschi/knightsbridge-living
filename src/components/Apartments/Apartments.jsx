@@ -13,7 +13,7 @@ const Apartments = ({ apartments, slug }) => {
       <div className="grid-container">
         <div className="apartments-list">
           {apartments.edges.map(apartment => (
-            <ApartmentCard apartment={apartment.node} />
+            <ApartmentCard apartment={apartment.node} key={apartment.node.id} />
           ))}
         </div>
       </div>

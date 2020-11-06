@@ -29,8 +29,8 @@ const BuildingSlider = ({ building }) => {
     <div className="swiper-slide">
       <Swiper {...params}>
         {Object.values(images).map((img, i) => (
-          <div className="grid-container">
-            <figure key={i} className="swiper-slide__img-wrapper">
+          <div className="grid-container" key={img.id}>
+            <figure className="swiper-slide__img-wrapper">
               <Image
                 fluid={img.fluid}
                 className="swiper-slide__img"
