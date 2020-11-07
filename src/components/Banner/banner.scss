@@ -4,7 +4,7 @@
   color: var(--mainWhite);
 
   grid-column: center-start / center-end;
-  margin-top: -30rem;
+  margin-top: -20rem;
   padding: 0 1rem;
 
   @media screen and (max-width: 1100px) {
@@ -16,6 +16,14 @@
   @media screen and (max-width: 768px) {
     margin-top: 0;
     grid-column: full-start / full-end;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+    margin-top: 0;
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+    margin-top: 0;
   }
 
   &__btn-primary {
@@ -38,6 +46,9 @@
 
     @media screen and (max-width: 550px) {
       text-align: center;
+    }
+    @media screen and (min-width: 550px) {
+      line-height: 4rem;
     }
   }
 

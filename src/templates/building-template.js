@@ -15,7 +15,7 @@ const BuildingTemplate = ({ data }) => {
       <Apartments apartments={data.apartments} slug={data.building.slug} />
       <TransportAndConnections />
       <StyledHero
-        top="true"
+        // top="true"
         opacity="true"
         img={data.homeHeroImage2.childImageSharp.fluid}
       >
