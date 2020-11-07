@@ -1,10 +1,28 @@
 .swiper-slide {
-  position: relative;
-  grid-column: full-start / full-end;
+  &__wrapper {
+    position: relative;
+    grid-column: full-start / full-end;
+
+    @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
 
   &__img-wrapper {
     max-height: 80rem;
     width: 100vw;
+
+    @media only screen and (max-width: 550px) {
+      height: 28rem;
+    }
+
+    @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+      height: 75rem;
+    }
+    @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+      height: 40rem;
+    }
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       height: 71rem;
@@ -36,6 +54,42 @@
     max-width: 38rem;
     background-color: var(--mainWhite);
     padding: 5.5rem 2.5rem 3.7rem;
+    z-index: 100;
+
+    &-mobile {
+      display: none;
+      grid-column: full-start / full-end;
+
+      @media only screen and (max-width: 600px) {
+        display: grid;
+        grid-row-gap: 3rem;
+        padding: 5.5rem 0 2rem;
+      }
+
+      @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+        display: grid;
+      }
+
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-device-width: 600px) {
+      display: none;
+    }
+
+    @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+      display: none;
+
+      &-mobile {
+        visibility: visible;
+      }
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      display: grid;
+    }
   }
 
   &__img {
@@ -56,13 +110,16 @@
     line-height: 1.1;
     letter-spacing: -0.42px;
 
-    @media screen and (max-width: 765px) {
-      font-size: 3.8rem;
-    }
-
     span {
       display: block;
       font-family: var(--mainFont);
+
+      @media screen and (max-width: 600px) {
+        display: inline-block;
+      }
+      @media screen and (max-width: 550px) {
+        display: block;
+      }
     }
   }
 
@@ -77,6 +134,10 @@
   &__buttons {
     display: flex;
     flex-wrap: wrap;
+
+    @media only screen and (max-device-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   &__btn {
@@ -92,6 +153,10 @@
     align-self: center;
     transition: 0.3s;
     width: 100%;
+
+    @media only screen and (max-device-width: 550px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__cta-left {
@@ -126,6 +191,17 @@
     border-color: var(--mainBlack);
   }
 
+  @media only screen and (max-device-width: 600px) {
+    &__cta-left,
+    &__cta-right {
+      width: 100%;
+      flex: 0 0 100%;
+      flex: 1;
+      margin-right: 0;
+    }
+  }
+
+  /*** swiper slider overrides ***/
   .swiper-button-prev,
   .swiper-button-next {
     color: var(--mainWhite) !important;
@@ -135,6 +211,10 @@
   .swiper-button-prev:after,
   .swiper-button-next:after {
     font-size: 3rem !important;
+
+    @media only screen and (max-width: 550px) {
+      font-size: 2.2rem !important;
+    }
   }
 
   .swiper-pagination-bullet {

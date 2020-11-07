@@ -112,9 +112,19 @@ p {
     )
     [center-end] minmax(6rem, 1fr) [full-end];
 
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 600px) {
     padding: 0 2rem;
   }
+}
+
+.grid-container-no-padding {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 17.6rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .btn-white {

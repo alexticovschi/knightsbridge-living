@@ -31,8 +31,8 @@ const ApartmentCard = ({ apartment }) => {
       prevEl: ".swiper-button-prev",
     },
     loop: true,
-    effect: "fade",
-    speed: 800,
+    effect: "cubeEffect",
+    speed: 500,
   }
 
   return (

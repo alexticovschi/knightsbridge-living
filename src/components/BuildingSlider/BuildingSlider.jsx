@@ -29,9 +29,10 @@ const BuildingSlider = ({ building }) => {
     <div className="swiper-slide">
       <Swiper {...params}>
         {Object.values(images).map((img, i) => (
-          <div className="grid-container" key={img.id}>
+          <div className="grid-container-no-padding" key={img.id}>
             <figure className="swiper-slide__img-wrapper">
               <Image
+                key={img.id}
                 fluid={img.fluid}
                 className="swiper-slide__img"
                 alt="slider image"
@@ -68,6 +69,36 @@ const BuildingSlider = ({ building }) => {
           </div>
         ))}
       </Swiper>
+      <div className="grid-container">
+        <div className="swiper-slide__box-mobile">
+          <h3 className="swiper-slide__title">
+            {title} <span>Building</span>
+          </h3>
+          <p className="swiper-slide__description">
+            {description.internal.content}
+          </p>
+          <div className="swiper-slide__buttons">
+            <Link
+              to="/knightsbridge"
+              className="swiper-slide__btn swiper-slide__cta-left"
+            >
+              View Gallery
+            </Link>
+            <Link
+              to="/buildings"
+              className="swiper-slide__btn swiper-slide__cta-right"
+            >
+              360 Virtual Tour
+            </Link>
+            <Link
+              to="/buildings"
+              className="swiper-slide__btn swiper-slide__cta-bottom"
+            >
+              Guided Video Tour
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
