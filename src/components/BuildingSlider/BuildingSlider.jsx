@@ -40,7 +40,8 @@ const BuildingSlider = ({ building }) => {
             </figure>
             <div className="swiper-slide__box">
               <h3 className="swiper-slide__title">
-                {title} <span>Building</span>
+                {title}{" "}
+                <span>{title !== "Carlyle Gardens" ? "Building" : ""}</span>
               </h3>
               <p className="swiper-slide__description">
                 {description.internal.content}
@@ -72,7 +73,8 @@ const BuildingSlider = ({ building }) => {
       <div className="grid-container">
         <div className="swiper-slide__box-mobile">
           <h3 className="swiper-slide__title">
-            {title} <span>Building</span>
+            {title}
+            <span>{title !== "Carlyle Gardens" ? "Building" : ""}</span>
           </h3>
           <p className="swiper-slide__description">
             {description.internal.content}
