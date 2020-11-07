@@ -13,7 +13,7 @@ const StyledHero = ({ img, className, children, home }) => {
 }
 
 export default styled(StyledHero)`
-  min-height: ${props => (props.home ? "calc(75vh - 66px)" : "60vh")};
+  min-height: ${props => (props.home ? "calc(100vh - 66px)" : "85vh")};
   background: ${props =>
     props.opacity
       ? "linear-gradient(to bottom right,rgb(40, 43, 42), rgba(0, 0, 0, 0.01))"
@@ -25,8 +25,9 @@ export default styled(StyledHero)`
   justify-content: center;
   align-items: center;
   margin-top: ${props => (props.marginTop ? "12rem" : 0)};
+  top: ${props => (props.top ? "6rem" : 0)};
 
-  @media screen and (max-width: 550px) {
-    min-height: ${props => (props.home ? "calc(100vh - 66px)" : "80vh")};
+  @media screen and (min-width: 550px) and (max-width: 670px) {
+    min-height: ${props => (props.home ? "120vh" : "80vh")};
   }
 `

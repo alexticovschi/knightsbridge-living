@@ -25,7 +25,7 @@
   &__title {
     font-family: var(--mainFontBold);
     font-size: 3rem;
-    line-height: 4.5rem;
+    line-height: 4rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 3rem;
@@ -44,10 +44,10 @@
   &__info {
     width: 100%;
     font-family: var(--mainFont);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 5rem;
     color: var(--mainWhite);
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: var(--mainSpacing);
 
     @media screen and (max-width: 550px) {

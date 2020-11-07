@@ -3,12 +3,35 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import BuildingSlider from "../components/BuildingSlider/BuildingSlider"
 import Apartments from "../components/Apartments/Apartments"
+import StyledHero from "../components/StyledHero"
+import Banner from "../components/Banner/Banner"
+import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
+import { Link } from "gatsby"
 
 const BuildingTemplate = ({ data }) => {
   return (
     <Layout>
       <BuildingSlider building={data.building} />
       <Apartments apartments={data.apartments} slug={data.building.slug} />
+      <TransportAndConnections />
+      <StyledHero
+        top="true"
+        opacity="true"
+        img={data.homeHeroImage2.childImageSharp.fluid}
+      >
+        <Banner
+          className="banner"
+          titleFirst="Rent your ideal home"
+          titleSecond="in Knightsbridge"
+        >
+          <Link to="/" className="btn-primary banner__btn-primary">
+            Book a viewing
+          </Link>
+          <Link to="/apartments" className="btn-white">
+            Find My Home
+          </Link>
+        </Banner>
+      </StyledHero>
     </Layout>
   )
 }
@@ -46,6 +69,13 @@ export const query = graphql`
               ...GatsbyContentfulFluid
             }
           }
+        }
+      }
+    }
+    homeHeroImage2: file(relativePath: { eq: "hero2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4140) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

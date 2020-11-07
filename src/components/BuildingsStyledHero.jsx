@@ -29,4 +29,18 @@ export default styled(BuildingsStyledHero)`
   @media screen and (max-width: 550px) {
     min-height: 25vh;
   }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+    min-height: 50vh;
+  }
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+    min-height: 30vh;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    min-height: 40vh;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    min-height: 30vh;
+  }
 `
