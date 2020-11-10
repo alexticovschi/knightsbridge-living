@@ -4,7 +4,7 @@
   grid-column: full-start / full-end;
   height: auto;
 
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 600px) {
     grid-column: full-start / full-end;
     grid-template-columns: 1fr;
   }
@@ -16,6 +16,11 @@
     width: 120%;
     padding: 8rem;
     z-index: 10;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: -10%;
+      padding: 6rem;
+    }
 
     @media only screen and (max-width: 550px) {
       height: 130%;
@@ -34,6 +39,10 @@
       font-size: 1.7rem;
       width: 75%;
 
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+      }
+
       @media only screen and (max-width: 550px) {
         width: 100%;
         text-align: center;
@@ -48,6 +57,10 @@
     grid-column: 2 / -1;
     padding-bottom: 10rem;
 
+    @media only screen and (max-width: 600px) {
+      margin-left: -10%;
+      margin-right: -10%;
+    }
     @media only screen and (max-width: 550px) {
       grid-column: 1;
       grid-row: 2;
