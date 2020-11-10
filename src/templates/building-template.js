@@ -5,6 +5,7 @@ import BuildingSlider from "../components/BuildingSlider/BuildingSlider"
 import Apartments from "../components/Apartments/Apartments"
 import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
+import BuildingFeatures from "../components/BuildingFeatures/BuildingFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import { Link } from "gatsby"
 
@@ -13,9 +14,13 @@ const BuildingTemplate = ({ data }) => {
     <Layout>
       <BuildingSlider building={data.building} />
       <Apartments apartments={data.apartments} slug={data.building.slug} />
+      <BuildingFeatures
+        features={data.building.features}
+        images={data.building.featureImages}
+        buildingName={data.building.title}
+      />
       <TransportAndConnections />
       <StyledHero
-        // top="true"
         opacity="true"
         img={data.homeHeroImage2.childImageSharp.fluid}
       >
@@ -50,6 +55,16 @@ export const query = graphql`
       images {
         id
         fluid(quality: 90, maxWidth: 4140) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      features {
+        id
+        feature
+      }
+      featureImages {
+        id
+        fluid(quality: 90, maxWidth: 740) {
           ...GatsbyContentfulFluid
         }
       }

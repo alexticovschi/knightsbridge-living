@@ -1,0 +1,109 @@
+.section-features {
+  &__title {
+    grid-column: full-start / full-end;
+
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--mainFontBold);
+    text-transform: uppercase;
+    color: var(--mainWhite);
+
+    background-color: var(--primaryColor);
+    width: 30rem;
+    padding: 1.6rem 2rem;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: 769px) {
+      grid-column: center-start / center-end;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-column: full-start / full-end;
+    }
+  }
+
+  &__building-name {
+    font-family: var(--mainFont);
+    font-weight: 400;
+  }
+
+  .features {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 9rem;
+    padding: 0 13rem;
+
+    @media only screen and (max-width: 1350px) {
+      grid-column-gap: 6rem;
+
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 1050px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-column: full-start / full-end;
+    }
+
+    &__slider-img {
+      height: 60rem;
+      background-position: center;
+      background-size: cover;
+
+      @media only screen and (max-width: 768px) {
+        height: 38rem;
+      }
+    }
+
+    &__list {
+      li {
+        margin-bottom: 2rem;
+
+        &:first-child {
+          font-size: 1.6rem;
+          line-height: 1.7;
+        }
+        &:not(:first-child) {
+          list-style: circle;
+          font-size: 1.6rem;
+          margin-left: 5rem;
+        }
+      }
+    }
+  }
+}
+
+.swiper-slide {
+  width: 100% !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--mainWhite) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2.5rem !important;
+  font-weight: bolder;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--mainWhite);
+  width: 1.2rem;
+  height: 1.2rem;
+  opacity: 1;
+  margin: 0 8px !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--primaryColor);
+}
