@@ -7,6 +7,7 @@ import StyledHero from "../components/StyledHero"
 import Banner from "../components/Banner/Banner"
 import BuildingFeatures from "../components/BuildingFeatures/BuildingFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
+import BuildingReviews from "../components/BuildingReviews/BuildingReviews"
 import { Link } from "gatsby"
 
 const BuildingTemplate = ({ data }) => {
@@ -37,6 +38,10 @@ const BuildingTemplate = ({ data }) => {
           </Link>
         </Banner>
       </StyledHero>
+      <BuildingReviews
+        reviews={data.reviews}
+        buildingName={data.building.title}
+      />
     </Layout>
   )
 }
@@ -91,6 +96,20 @@ export const query = graphql`
       childImageSharp {
         fluid(quality: 90, maxWidth: 4140) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    reviews: allContentfulBuildingReview(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          id
+          title
+          content {
+            id
+            internal {
+              content
+            }
+          }
         }
       }
     }

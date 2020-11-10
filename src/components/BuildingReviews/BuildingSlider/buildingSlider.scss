@@ -1,0 +1,50 @@
+.building-slider {
+  display: grid;
+  grid-column: 2 / -1;
+
+  z-index: 20;
+}
+
+.slick-arrow {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 0rem;
+  z-index: 20;
+  opacity: 1 !important;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  color: var(--primaryColor) !important;
+  font-size: 4.5rem;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.slick-arrow.slick-prev::before {
+  padding-right: 4rem !important;
+}
+
+.slick-slide {
+  z-index: 100;
+  overflow-y: hidden;
+}
+
+.slick-slide img {
+  margin: 0 2.5rem;
+  z-index: 100;
+}
+
+.slick-list {
+  height: auto;
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  line-height: 20px;
+}

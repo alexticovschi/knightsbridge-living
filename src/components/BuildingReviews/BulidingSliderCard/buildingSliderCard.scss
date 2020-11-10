@@ -1,0 +1,92 @@
+.building-slider-card {
+  display: grid;
+  overflow-x: hidden;
+
+  &__img-wrapper {
+    position: relative;
+    height: 25rem;
+    width: calc(100% - 2.5rem);
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-left: 2.5rem;
+
+    background-color: #6c757d;
+
+    @media only screen and (max-width: 550px) {
+      margin-left: 1.25rem;
+      margin-right: 3.5rem;
+    }
+  }
+
+  &__img {
+    // position: relative;
+    width: 12rem;
+    object-fit: cover;
+
+    @media only screen and (max-width: 550px) {
+      height: 12rem;
+      width: 12rem;
+    }
+  }
+
+  &__badge-wrapper {
+    position: absolute;
+    width: 80%;
+    height: 16%;
+    top: 0;
+    left: 0;
+    color: var(--mainWhite);
+    z-index: 100;
+    background: var(--mainBlack);
+
+    @media only screen and (max-width: 500px) {
+      right: 10px;
+    }
+
+    @media only screen and (max-width: 350px) {
+      width: 95%;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 9px;
+    left: 3rem;
+    width: 100%;
+    // text-align: left;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__data {
+    text-align: center;
+    margin-left: 2.5rem;
+    padding: 3rem;
+    min-height: 28rem;
+
+    background-color: var(--mainWhite);
+
+    @media only screen and (max-width: 550px) {
+      min-height: 28rem;
+      margin: 0 1.35rem 0 1.3rem;
+    }
+  }
+
+  &__reviews {
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    font-family: var(--mainFontBold);
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  &__review {
+    font-size: 1.5rem;
+  }
+}
