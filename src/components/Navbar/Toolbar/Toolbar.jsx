@@ -17,34 +17,22 @@ const Toolbar = ({ isOpen, drawerClickHandler }) => (
         <div className="spacer" />
         <ul className="toolbar__navigation-items">
           <li className="toolbar__navigation-item">
-            <Link to="/buildings">
-              Buildings
-            </Link>
+            <Link to="/buildings">Buildings</Link>
           </li>
           <li className="toolbar__navigation-item">
-            <Link to="/knightsbridge">
-              Knightsbridge
-            </Link>
+            <Link to="/knightsbridge">Knightsbridge</Link>
           </li>
           <li className="toolbar__navigation-item">
-            <Link to="/living-with-us">
-              Living With Us
-            </Link>
+            <Link to="/living-with-us">Living With Us</Link>
           </li>
           <li className="toolbar__navigation-item">
-            <Link to="/about">
-              About
-            </Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="toolbar__navigation-item">
-            <Link to="/contact">
-              Contact
-            </Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="toolbar__navigation-item find-a-home btn-primary">
-            <Link to="/find-a-home">
-              Find A Home
-            </Link>
+            <Link to="/apartments">Find A Home</Link>
           </li>
         </ul>
         <div className="toolbar__toggle-button">

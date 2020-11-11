@@ -7,34 +7,22 @@ const SideDrawer = ({ show }) => {
     <nav className={show ? "side-drawer open" : "side-drawer"}>
       <ul>
         <li>
-          <Link to="/buildings">
-            Buildings
-          </Link>
+          <Link to="/buildings">Buildings</Link>
         </li>
         <li>
-          <Link to="/knightsbridge">
-            Knightsbridge
-          </Link>
+          <Link to="/knightsbridge">Knightsbridge</Link>
         </li>
         <li>
-          <Link to="/living-with-us">
-            Living With Us
-          </Link>
+          <Link to="/living-with-us">Living With Us</Link>
         </li>
         <li>
-          <Link to="/about">
-            About
-          </Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/contact">
-            Contact
-          </Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/find-a-home">
-            Find A Home
-          </Link>
+          <Link to="/apartments">Find A Home</Link>
         </li>
       </ul>
     </nav>

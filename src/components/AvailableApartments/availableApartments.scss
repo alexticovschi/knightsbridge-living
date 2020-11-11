@@ -1,0 +1,61 @@
+.section-apartments {
+  &__header {
+    grid-column: center-start / center-end;
+
+    @media only screen and (max-width: 600px) {
+      grid-column: full-start / full-end;
+    }
+
+    &-title,
+    &-text {
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-family: var(--mainFontBold);
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      text-align: center;
+      font-size: 1.8rem;
+      width: 75%;
+      margin: auto;
+
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        font-size: 1.65rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+  }
+}
+
+.apartments-list {
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+
+  @media only screen and (max-width: 1150px) {
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    grid-column: full-start / full-end;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+}

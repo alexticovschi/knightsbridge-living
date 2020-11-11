@@ -47,7 +47,7 @@ const HomePage = ({ data }) => {
             titleSecond="in Knightsbridge"
             info="From stylish gardens to roof terraces and gyms, we’ve created social spaces for residents to enjoy."
           >
-            <Link to="/" className="btn-primary banner__btn-primary">
+            <Link to="/apartments" className="btn-primary banner__btn-primary">
               Find a Home
             </Link>
             <Link to="/" className="btn-white">
