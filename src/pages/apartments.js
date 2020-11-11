@@ -12,7 +12,10 @@ const Apartments = ({ data }) => {
       <Layout>
         <AvailableApartments apartments={data.apartments} />
         <BenefitsSlider />
-        <ExploreBuildings buildings={data.exploreBuildings.edges} />
+        <ExploreBuildings
+          buildings={data.exploreBuildings.edges}
+          title="Explore our Knightsbridge Living buildings"
+        />
       </Layout>
     </main>
   )

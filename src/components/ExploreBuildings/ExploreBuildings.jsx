@@ -4,10 +4,10 @@ import Title from "../Title/Title"
 
 import "./exploreBuildings.scss"
 
-const ExploreBuildings = ({ buildings }) => {
+const ExploreBuildings = ({ buildings, title }) => {
   return (
     <section className="section-explore-buildings mt mb">
-      <Title title="Explore other Knightsbridge Livings buildings" />
+      <Title title={title} />
       <div className="grid-container">
         <div className="explore-buildings">
           {buildings.map(({ node }) => (

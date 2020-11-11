@@ -43,7 +43,10 @@ const BuildingTemplate = ({ data }) => {
         reviews={data.reviews}
         buildingName={data.building.title}
       />
-      <ExploreBuildings buildings={data.exploreBuildings.edges} />
+      <ExploreBuildings
+        buildings={data.exploreBuildings.edges}
+        title="Explore other Knightsbridge Living buildings"
+      />
     </Layout>
   )
 }
