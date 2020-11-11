@@ -3,7 +3,6 @@ import BuildingSlider from "./BuildingSlider/BuildingSlider"
 import "./buildingReviews.scss"
 
 const BuildingReviews = ({ reviews, buildingName }) => {
-  console.log(reviews)
   return (
     <section className="section-building-reviews">
       <div className="grid-container">

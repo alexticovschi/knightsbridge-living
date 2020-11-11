@@ -8,6 +8,7 @@ import Banner from "../components/Banner/Banner"
 import BuildingFeatures from "../components/BuildingFeatures/BuildingFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import BuildingReviews from "../components/BuildingReviews/BuildingReviews"
+import ExploreBuildings from "../components/ExploreBuildings/ExploreBuildings"
 import { Link } from "gatsby"
 
 const BuildingTemplate = ({ data }) => {
@@ -42,6 +43,7 @@ const BuildingTemplate = ({ data }) => {
         reviews={data.reviews}
         buildingName={data.building.title}
       />
+      <ExploreBuildings buildings={data.exploreBuildings.edges} />
     </Layout>
   )
 }
@@ -108,6 +110,24 @@ export const query = graphql`
             id
             internal {
               content
+            }
+          }
+        }
+      }
+    }
+    exploreBuildings: allContentfulBuilding(
+      filter: { slug: { ne: $slug } }
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          intro
+          title
+          slug
+          images {
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
         }

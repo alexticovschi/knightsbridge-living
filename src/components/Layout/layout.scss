@@ -197,3 +197,11 @@ main {
 
   margin-top: 6rem;
 }
+
+.mb {
+  @media screen and (min-width: 750px) {
+    margin-bottom: 10rem;
+  }
+
+  margin-bottom: 6rem;
+}
