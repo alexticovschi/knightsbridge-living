@@ -9,6 +9,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 const HomePage = ({ data }) => {
+  console.log(data.reviews)
   return (
     <main>
       <Layout>
@@ -55,7 +56,7 @@ const HomePage = ({ data }) => {
             </Link>
           </Banner>
         </StyledHero>
-        <Reviews />
+        <Reviews data={data.reviews.edges} />
       </Layout>
     </main>
   )
@@ -74,6 +75,23 @@ export const query = graphql`
       childImageSharp {
         fluid(quality: 90, maxWidth: 4140) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    reviews: allContentfulReviews {
+      edges {
+        node {
+          id
+          label
+          title
+          content {
+            content
+          }
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }

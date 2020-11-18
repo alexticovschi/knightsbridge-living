@@ -2,7 +2,7 @@ import React from "react"
 import Slider from "../Slider/Slider"
 import "./reviews.scss"
 
-const Reviews = () => {
+const Reviews = ({ data }) => {
   return (
     <section className="section-reviews">
       <div className="grid-container">
@@ -17,7 +17,7 @@ const Reviews = () => {
             </p>
           </div>
           <div className="reviews__slider-container">
-            <Slider />
+            <Slider data={data} />
           </div>
         </section>
       </div>

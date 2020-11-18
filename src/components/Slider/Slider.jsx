@@ -46,36 +46,37 @@ const settings = {
   ],
 }
 
-const getReviews = graphql`
-  {
-    reviews: allContentfulReviews {
-      edges {
-        node {
-          id
-          label
-          title
-          content {
-            content
-          }
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const getReviews = graphql`
+//   {
+//     reviews: allContentfulReviews {
+//       edges {
+//         node {
+//           id
+//           label
+//           title
+//           content {
+//             content
+//           }
+//           image {
+//             fluid {
+//               ...GatsbyContentfulFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
-const MySlider = () => {
-  const response = useStaticQuery(getReviews)
-  const reviews = response.reviews.edges
+const MySlider = ({ data }) => {
+  console.log(data)
+  // const response = useStaticQuery(getReviews)
+  // const reviews = response.reviews.edges
 
   return (
     <Slider {...settings} className="sldr mt">
-      {reviews.map(({ node }) => (
-        <SliderCard key={node.title} review={node} />
+      {data.map(({ node }) => (
+        <SliderCard key={node.title} data={node} />
       ))}
     </Slider>
   )

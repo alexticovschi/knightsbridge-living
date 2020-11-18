@@ -21,7 +21,7 @@ const BuildingTemplate = ({ data }) => {
         images={data.building.featureImages}
         buildingName={data.building.title}
       />
-      <TransportAndConnections />
+      <TransportAndConnections title="Transport & Connections" />
       <StyledHero
         opacity="true"
         img={data.homeHeroImage2.childImageSharp.fluid}

@@ -3,14 +3,14 @@ import Image from "gatsby-image"
 
 import "./sliderCard.scss"
 
-const SliderCard = ({ review }) => {
+const SliderCard = ({ data }) => {
   const {
     label,
     title,
     image,
     id,
     content: { content },
-  } = review
+  } = data
   return (
     <div className="slider-card" key={id}>
       <figure className="slider-card__img-wrapper">

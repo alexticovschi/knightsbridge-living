@@ -2,12 +2,10 @@ import React from "react"
 
 import "./transportAndConnections.scss"
 
-const TransportAndConnections = () => {
+const TransportAndConnections = ({ title }) => {
   return (
     <section className="transport-and-connections grid-container mt">
-      <h2 className="transport-and-connections__title">
-        Transport & Connections
-      </h2>
+      <h2 className="transport-and-connections__title">{title}</h2>
       <p className="transport-and-connections__info">
         London is just a stone’s throw away. Ten minutes to be more exact.
       </p>
