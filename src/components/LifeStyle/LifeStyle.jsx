@@ -5,7 +5,7 @@ import "./lifeStyle.scss"
 const LifeStyle = ({ data }) => {
   return (
     <section className="section-lifestyle">
-      <div className="grid-container">
+      <div className="grid-container-no-padding">
         <section className="lifestyle">
           <div className="lifestyle__container">
             <h2 className="lifestyle__title">Life Style in Knightsbridge</h2>

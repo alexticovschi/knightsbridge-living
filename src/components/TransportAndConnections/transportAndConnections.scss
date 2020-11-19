@@ -1,7 +1,7 @@
 .transport-and-connections {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-row-gap: 1.5rem;
   grid-column: center-start / center-end;
   position: relative;
@@ -34,6 +34,7 @@
 
   &__list {
     grid-row: 4;
+    margin-top: 8rem;
     position: absolute;
     display: flex;
     flex-wrap: wrap;

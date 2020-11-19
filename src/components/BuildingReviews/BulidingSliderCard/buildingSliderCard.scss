@@ -2,6 +2,10 @@
   display: grid;
   overflow-x: hidden;
 
+  @media only screen and (max-width: 550px) {
+    padding: 0 2rem;
+  }
+
   &__img-wrapper {
     position: relative;
     height: 25rem;
@@ -32,32 +36,28 @@
 
   &__badge-wrapper {
     position: absolute;
-    width: 80%;
-    height: 16%;
+    width: 90%;
+
     top: 0;
     left: 0;
     color: var(--mainWhite);
     z-index: 100;
-    background: var(--mainBlack);
 
     @media only screen and (max-width: 500px) {
       right: 10px;
-    }
-
-    @media only screen and (max-width: 350px) {
-      width: 95%;
     }
   }
 
   &__badge {
     position: absolute;
-    top: 9px;
-    left: 3rem;
-    width: 100%;
-    // text-align: left;
-    font-weight: 700;
-    font-size: 1.6rem;
+    color: #fff;
+    font-size: 18px;
     text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    padding: 0.8rem 2rem;
+    background: var(--mainBlack);
+    font-family: var(--mainFontBold);
   }
 
   &__data {

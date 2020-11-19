@@ -17,6 +17,10 @@
     padding: 8rem;
     z-index: 10;
 
+    @media only screen and (max-width: 600px) {
+      padding: 4rem 3.5rem;
+    }
+
     @media only screen and (max-width: 550px) {
       height: 130%;
       padding: 4rem 3.5rem;
@@ -28,16 +32,20 @@
       font-size: 2.5rem;
       font-family: var(--mainFontBold);
       color: var(--mainWhite);
+      text-transform: uppercase;
     }
     &__text {
       color: var(--mainWhite);
       font-size: 1.7rem;
       width: 75%;
 
-      @media only screen and (max-width: 550px) {
+      @media only screen and (max-width: 600px) {
         width: 100%;
-        text-align: center;
         font-size: 1.6rem;
+      }
+
+      @media only screen and (max-width: 550px) {
+        text-align: center;
       }
     }
   }

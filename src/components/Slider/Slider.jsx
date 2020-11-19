@@ -1,7 +1,6 @@
 import React from "react"
 import Slider from "react-slick"
 import SliderCard from "../SliderCard/SliderCard"
-import { useStaticQuery, graphql } from "gatsby"
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 import "./slider.scss"
@@ -46,33 +45,7 @@ const settings = {
   ],
 }
 
-// const getReviews = graphql`
-//   {
-//     reviews: allContentfulReviews {
-//       edges {
-//         node {
-//           id
-//           label
-//           title
-//           content {
-//             content
-//           }
-//           image {
-//             fluid {
-//               ...GatsbyContentfulFluid
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-
 const MySlider = ({ data }) => {
-  console.log(data)
-  // const response = useStaticQuery(getReviews)
-  // const reviews = response.reviews.edges
-
   return (
     <Slider {...settings} className="sldr mt">
       {data.map(({ node }) => (
