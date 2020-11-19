@@ -14,11 +14,11 @@ const ApartmentTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $nameSlugified: String!) {
     building: contentfulBuilding(slug: { eq: $slug }) {
       title
     }
-    apartment: contentfulApartment(slug: { eq: $slug }) {
+    apartment: contentfulApartment(nameSlugified: { eq: $nameSlugified }) {
       id
       name
       nameSlugified
@@ -28,7 +28,7 @@ export const query = graphql`
       furnished
       price
       images {
-        fluid(quality: 90, maxWidth: 1940) {
+        fluid(quality: 90, maxWidth: 2940) {
           ...GatsbyContentfulFluid
         }
       }
