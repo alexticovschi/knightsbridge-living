@@ -7,12 +7,12 @@ import HealthAndCommunity from "../components/HealthAndCommunity/HealthAndCommun
 import LifeStyle from "../components/LifeStyle/LifeStyle"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import Directions from "../components/Directions/Directions"
+import ThreeApartments from "../components/ThreeApartments/ThreeApartments"
 
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 const Knightsbridge = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <StyledHero
@@ -58,12 +58,31 @@ const Knightsbridge = ({ data }) => {
       />
       <TransportAndConnections title="London Underground Journey Times" />
       <Directions />
+      <ThreeApartments apartments={data.apartments} />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
+    apartments: allContentfulApartment(limit: 3) {
+      edges {
+        node {
+          id
+          name
+          numberOfBeds
+          squareMeters
+          slug
+          furnished
+          price
+          images {
+            fluid(quality: 90, maxWidth: 540) {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
     lifeStyle: allContentfulLifeStyle {
       edges {
         node {

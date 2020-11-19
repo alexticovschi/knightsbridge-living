@@ -5,7 +5,7 @@ import "./footer.scss"
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer mt-5">
       <div className="grid-container">
         <div className="footer__container">
           <div className="footer__logo">
