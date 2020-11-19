@@ -3,13 +3,14 @@ import Swiper from "react-id-swiper"
 import "swiper/css/swiper.css"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
-import slugify from "slugify"
 
 import "./apartmentCard.scss"
 
 const ApartmentCard = ({ apartment }) => {
   const {
+    id,
     name,
+    nameSlugified,
     price,
     squareMeters,
     images,
@@ -17,8 +18,6 @@ const ApartmentCard = ({ apartment }) => {
     furnished,
     numberOfBeds,
   } = apartment
-
-  const nameSlugified = slugify(name).toLowerCase()
 
   const params = {
     pagination: {
@@ -38,10 +37,10 @@ const ApartmentCard = ({ apartment }) => {
   return (
     <div className="apartment-card">
       <Swiper className="apartment-card__slider" {...params}>
-        {Object.values(images).map((img, i) => (
+        {images.map(img => (
           <Link
             to={`/apartments/${slug}/${nameSlugified}`}
-            key={i}
+            key={id + Math.random() * 101}
             className="apartment-card__slider-img-wrapper"
           >
             <Image
@@ -74,7 +73,7 @@ const ApartmentCard = ({ apartment }) => {
             to={`/buildings/${slug}`}
             className="apartment-card__btn apartment-card__cta-right"
           >
-            Book Viewing
+            Book A Viewing
           </Link>
           <Link
             to={`/buildings/${slug}`}

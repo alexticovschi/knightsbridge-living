@@ -28,6 +28,7 @@ export const query = graphql`
         node {
           id
           name
+          nameSlugified
           numberOfBeds
           squareMeters
           slug

@@ -11,6 +11,14 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      apartments: allContentfulApartment {
+        edges {
+          node {
+            slug
+            nameSlugified
+          }
+        }
+      }
     }
   `)
   data.buildings.edges.forEach(({ node }) => {
@@ -19,6 +27,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve("./src/templates/building-template.js"),
       context: {
         slug: node.slug,
+      },
+    })
+  })
+  data.apartments.edges.forEach(({ node }) => {
+    createPage({
+      path: `apartments/${node.slug}/${node.nameSlugified}`,
+      component: path.resolve("./src/templates/apartment-template.js"),
+      context: {
+        slug: node.slug,
+        nameSlugified: node.nameSlugified,
       },
     })
   })

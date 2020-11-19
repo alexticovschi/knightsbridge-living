@@ -1,0 +1,145 @@
+.section-apartment-hero-slider {
+  .apartment-hero-slider {
+    grid-column: center-start / center-end;
+    margin-top: 20px;
+
+    &__wrapper {
+      grid-column: center-start / full-end;
+
+      display: grid;
+      grid-template-columns: 60rem 1fr;
+
+      @media screen and (max-width: 1400px) {
+        grid-template-columns: 40rem 1fr;
+      }
+      @media screen and (max-width: 800px) {
+        grid-column: full-start / full-end;
+
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__body {
+      display: grid;
+      grid-template-rows: repeat(auto, min-content);
+      grid-row-gap: 1.5rem;
+      border-radius: 6px;
+      left: 2rem;
+      background-color: var(--mainWhite);
+      padding: 10rem 5rem 0 0;
+
+      @media screen and (max-width: 800px) {
+        padding: 4rem 3rem;
+      }
+    }
+
+    &__breadcrumbs {
+      text-transform: uppercase;
+      font-size: 1.9rem;
+
+      @media screen and (max-width: 475px) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__name {
+      font-size: 5rem;
+      font-family: var(--mainFontBold);
+      text-align: left;
+      text-transform: uppercase;
+
+      margin-bottom: 0;
+      line-height: 1.1;
+      letter-spacing: -0.42px;
+
+      @media screen and (max-width: 475px) {
+        font-size: 4rem;
+      }
+
+      span {
+        display: block;
+        font-family: var(--mainFont);
+      }
+    }
+
+    &__info {
+      font-size: 1.55rem;
+      font-family: var(--mainFontBold);
+    }
+
+    &__offer {
+      font-size: 1.55rem;
+    }
+
+    &__price {
+      font-size: 2.5rem;
+
+      @media screen and (max-width: 475px) {
+        font-size: 2.3rem;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__btn {
+      display: block;
+      border-radius: 9px;
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      align-self: center;
+      transition: 0.3s;
+      width: 100%;
+      flex: 0 0 100%;
+      flex: 1;
+    }
+
+    &__cta-first,
+    &__cta-second {
+      color: var(--primaryColor);
+      border: 1px solid var(--primaryColor);
+    }
+
+    &__cta-last {
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 3.5rem;
+
+      background-color: var(--primaryColor);
+      color: var(--mainWhite);
+      border: 1px solid var(--primaryColor);
+    }
+
+    &__slider-img-wrapper {
+      width: 100%;
+      height: 65rem;
+      top: 0;
+      right: 0;
+      @media screen and (max-width: 1024px) {
+        height: 100%;
+      }
+
+      @media screen and (max-width: 800px) {
+        height: 75vh;
+      }
+    }
+
+    &__slider-img {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.swiper-container {
+  margin: 0;
+}

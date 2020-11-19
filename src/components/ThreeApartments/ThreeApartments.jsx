@@ -17,7 +17,10 @@ const ThreeApartments = ({ apartments }) => {
         </div>
         <div className="apartments-list">
           {apartments.edges.map(apartment => (
-            <ApartmentCard apartment={apartment.node} key={apartment.node.id} />
+            <ApartmentCard
+              apartment={apartment.node}
+              key={apartment.node.name}
+            />
           ))}
         </div>
       </div>
