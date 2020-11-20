@@ -7,13 +7,10 @@
   justify-content: center;
   padding: 1.6rem 0;
 
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
   &__heading {
     font-size: 1.6rem;
     color: var(--mainWhite);
+    text-align: center;
     margin: 0;
   }
 }
