@@ -1,0 +1,19 @@
+.sub-banner {
+  grid-column: full-start / full-end;
+  background-color: var(--primaryColor);
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 0;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    color: var(--mainWhite);
+    margin: 0;
+  }
+}

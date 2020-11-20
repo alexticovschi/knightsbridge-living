@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import ApartmentHeroSlider from "../components/ApartmentHeroSlider/ApartmentHeroSlider"
+import SubBanner from "../components/SubBanner/SubBanner"
 
 const ApartmentTemplate = ({ data }) => {
   return (
@@ -9,6 +10,7 @@ const ApartmentTemplate = ({ data }) => {
         apartment={data.apartment}
         buildingName={data.building.title}
       />
+      <SubBanner />
     </Layout>
   )
 }
