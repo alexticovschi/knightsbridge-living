@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import ApartmentHeroSlider from "../components/ApartmentHeroSlider/ApartmentHeroSlider"
 import SubBanner from "../components/SubBanner/SubBanner"
+import FloorPlan from "../components/FloorPlan/FloorPlan"
 
 const ApartmentTemplate = ({ data }) => {
   return (
@@ -11,6 +12,7 @@ const ApartmentTemplate = ({ data }) => {
         buildingName={data.building.title}
       />
       <SubBanner />
+      <FloorPlan floorPlanImage={data.building.floorPlanImage} />
     </Layout>
   )
 }
@@ -19,6 +21,34 @@ export const query = graphql`
   query($slug: String!, $nameSlugified: String!) {
     building: contentfulBuilding(slug: { eq: $slug }) {
       title
+      slug
+      description {
+        id
+        internal {
+          content
+        }
+      }
+      images {
+        id
+        fluid(quality: 90, maxWidth: 4140) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      features {
+        id
+        feature
+      }
+      featureImages {
+        id
+        fluid(quality: 90, maxWidth: 740) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      floorPlanImage {
+        fluid(quality: 90, maxWidth: 640) {
+          ...GatsbyContentfulFluid
+        }
+      }
     }
     apartment: contentfulApartment(nameSlugified: { eq: $nameSlugified }) {
       id
