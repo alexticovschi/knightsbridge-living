@@ -31,7 +31,7 @@ const Toolbar = ({ isOpen, drawerClickHandler }) => (
           <li className="toolbar__navigation-item">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="toolbar__navigation-item find-a-home btn-primary">
+          <li className="toolbar__navigation-item find-a-home">
             <Link to="/apartments">Find A Home</Link>
           </li>
         </ul>

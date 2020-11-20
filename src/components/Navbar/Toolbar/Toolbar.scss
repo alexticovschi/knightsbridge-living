@@ -54,7 +54,7 @@
   }
 
   &__navigation-item {
-    padding-left: 3rem;
+    margin-left: 3rem;
     display: flex;
     align-self: center;
 
@@ -97,6 +97,28 @@
   margin-left: 3.5rem;
 
   a {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    border: 2px solid var(--primaryColor);
+    border-radius: var(--mainBorderRadius);
+    padding: 0.9rem 1.5rem;
+    font-size: 1.3rem;
+    font-family: var(--mainFont);
+    display: inline-block;
+    transition: var(--mainTransition);
+    cursor: pointer;
+    z-index: 100;
+
+    @media only screen and (max-width: 550px) {
+      font-size: 1.5rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
     &::before {
       height: 0;
     }
