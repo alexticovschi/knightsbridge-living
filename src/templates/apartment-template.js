@@ -4,6 +4,8 @@ import ApartmentHeroSlider from "../components/ApartmentHeroSlider/ApartmentHero
 import SubBanner from "../components/SubBanner/SubBanner"
 import FloorPlan from "../components/FloorPlan/FloorPlan"
 import BuildingApartmentFeatures from "../components/BuildingApartmentFeatures/BuildingApartmentFeatures"
+import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
+import ThreeApartmentsNoBg from "../components/ThreeApartmentsNoBg/ThreeApartmentsNoBg"
 
 const ApartmentTemplate = ({ data }) => {
   return (
@@ -19,6 +21,8 @@ const ApartmentTemplate = ({ data }) => {
         images={data.building.featureImages}
         buildingName={data.building.title}
       />
+      <TransportAndConnections title="Transport & Connections" />
+      <ThreeApartmentsNoBg apartments={data.apartments} />
     </Layout>
   )
 }
@@ -71,11 +75,12 @@ export const query = graphql`
         }
       }
     }
-    apartments: allContentfulApartment(filter: { slug: { eq: $slug } }) {
+    apartments: allContentfulApartment(limit: 3) {
       edges {
         node {
           id
           name
+          nameSlugified
           numberOfBeds
           squareMeters
           slug
@@ -83,45 +88,6 @@ export const query = graphql`
           price
           images {
             fluid(quality: 90, maxWidth: 540) {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-    homeHeroImage2: file(relativePath: { eq: "hero2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4140) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    reviews: allContentfulBuildingReview(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          id
-          title
-          content {
-            id
-            internal {
-              content
-            }
-          }
-        }
-      }
-    }
-    exploreBuildings: allContentfulBuilding(
-      filter: { slug: { ne: $slug } }
-      limit: 4
-    ) {
-      edges {
-        node {
-          id
-          intro
-          title
-          slug
-          images {
-            fluid {
               ...GatsbyContentfulFluid
             }
           }
