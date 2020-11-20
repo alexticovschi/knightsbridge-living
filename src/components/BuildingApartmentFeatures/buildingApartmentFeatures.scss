@@ -1,0 +1,115 @@
+.section-building-features {
+  .building-features {
+    &__title {
+      text-align: center;
+      font-size: 2rem;
+      font-family: var(--mainFontBold);
+      text-transform: uppercase;
+      color: var(--mainWhite);
+
+      background-color: var(--primaryColor);
+      width: 33rem;
+      padding: 1.6rem 2rem;
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: 769px) {
+        grid-column: center-start / center-end;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        grid-column: full-start / full-end;
+      }
+    }
+
+    &__building-name {
+      font-family: var(--mainFont);
+      font-weight: 400;
+    }
+
+    &__content {
+      grid-column: center-start / center-end;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 9rem;
+
+      @media only screen and (max-width: 1350px) {
+        grid-template-columns: 2fr 0.8fr;
+        grid-column-gap: 6rem;
+        padding: 0;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        grid-template-columns: 1fr;
+      }
+
+      @media only screen and (max-width: 600px) {
+        grid-column: full-start / full-end;
+      }
+    }
+    &__slider-img {
+      height: 100rem;
+      background-position: center;
+      background-size: cover;
+
+      @media only screen and (max-width: 1350px) {
+        height: 120rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        height: 48vh;
+      }
+    }
+
+    &__description-list {
+      height: 90%;
+      width: 100%;
+      padding: 6.5rem 5.7rem;
+      margin-top: 6rem;
+      margin-bottom: 5rem;
+      margin-left: -20rem;
+      z-index: 10;
+      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      background-color: var(--mainWhite);
+
+      @media only screen and (max-width: 1350px) {
+        grid-row-gap: 4rem;
+        width: auto;
+        margin: 0;
+        height: 100%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        padding: 4rem 0;
+      }
+
+      li {
+        margin-bottom: 2rem;
+
+        &:nth-child(2) {
+          font-size: 1.6rem;
+          line-height: 1.7;
+        }
+        &:not(:nth-child(2)) {
+          list-style: circle;
+          font-size: 1.6rem;
+          margin-left: 5rem;
+        }
+      }
+    }
+  }
+}
+
+.swiper-button-next.ap {
+  margin-right: 15rem;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.swiper-button-prev.ap:after,
+.swiper-button-next.ap:after {
+  font-size: 3rem !important;
+}

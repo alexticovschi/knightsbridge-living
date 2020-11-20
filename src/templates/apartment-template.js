@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout"
 import ApartmentHeroSlider from "../components/ApartmentHeroSlider/ApartmentHeroSlider"
 import SubBanner from "../components/SubBanner/SubBanner"
 import FloorPlan from "../components/FloorPlan/FloorPlan"
+import BuildingApartmentFeatures from "../components/BuildingApartmentFeatures/BuildingApartmentFeatures"
 
 const ApartmentTemplate = ({ data }) => {
   return (
@@ -13,6 +14,11 @@ const ApartmentTemplate = ({ data }) => {
       />
       <SubBanner />
       <FloorPlan floorPlanImage={data.building.floorPlanImage} />
+      <BuildingApartmentFeatures
+        features={data.building.features}
+        images={data.building.featureImages}
+        buildingName={data.building.title}
+      />
     </Layout>
   )
 }
