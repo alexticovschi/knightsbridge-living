@@ -59,8 +59,8 @@ const Benefits = () => {
             </figure>
             <h2 className="benefits__title">Exclusive Offers</h2>
             <p className="benefits__text">
-              eserve now and move in by 30 November and get up to 2 month's rent
-              free on selected apartments. T&Cs apply.
+              Reserve now and move in by 30 November and get up to 2 month's
+              rent free on selected apartments. T&Cs apply.
             </p>
           </div>
         </div>
