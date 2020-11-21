@@ -9,7 +9,6 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 const HomePage = ({ data }) => {
-  console.log(data.reviews)
   return (
     <main>
       <Layout>

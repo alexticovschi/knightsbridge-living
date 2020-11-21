@@ -13,7 +13,7 @@ const BenefitsSlider = () => {
         <Slider />
       </div>
       <Link
-        to="/benefits"
+        to="/living-with-us"
         className="btn-primary section-benefits-slider__btn-primary"
       >
         Learn more

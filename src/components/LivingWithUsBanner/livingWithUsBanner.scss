@@ -1,0 +1,93 @@
+.living-with-us-banner {
+  text-align: left;
+  letter-spacing: var(--mainSpacing);
+  background-color: var(--mainWhite);
+
+  grid-column: center-start / center-end;
+
+  padding: 8rem 5rem;
+  width: 50rem;
+  height: 52rem;
+  border-radius: var(--mainBorderRadius);
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+    grid-column: full-start / full-end;
+
+    height: auto;
+    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+    width: 45rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    grid-column: center-start / center-end !important;
+    width: 42rem;
+    height: 45rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    width: 44rem;
+    height: 50rem;
+
+    padding: 8rem 3rem 3rem 3rem;
+  }
+  @media only screen and (device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+    width: 45rem;
+    height: 50rem;
+    padding: 7rem 3rem 3rem 3rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: var(--mainSpacing);
+
+    span {
+      font-family: var(--mainFontBold);
+    }
+
+    @media screen and (min-width: 605px) {
+      line-height: 6rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      font-size: 4.5rem;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 9vw;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+    line-height: 2.7rem;
+
+    @media screen and (min-width: 768px) {
+      font-family: var(--mainFont);
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+  }
+}
