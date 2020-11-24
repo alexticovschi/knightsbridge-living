@@ -1,0 +1,152 @@
+.contact-banner {
+  text-align: left;
+  letter-spacing: var(--mainSpacing);
+  background-color: var(--mainWhite);
+
+  grid-column: center-start / center-end;
+
+  padding: 8rem 5rem;
+  width: 53rem;
+  height: 55rem;
+  border-radius: var(--mainBorderRadius);
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-column: full-start / full-end;
+
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: portrait) {
+    grid-column: full-start / full-end;
+
+    height: auto;
+    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+    width: 45rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    grid-column: center-start / center-end !important;
+    width: 42rem;
+    height: 49rem;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    width: 44rem;
+    height: 54rem;
+
+    padding: 8rem 3rem 3rem 3rem;
+  }
+  @media only screen and (device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+    width: 45rem;
+    height: 53rem;
+    padding: 7rem 3rem 3rem 3rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: var(--mainFontBold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: var(--mainSpacing);
+
+    @media screen and (min-width: 605px) {
+      line-height: 6rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      font-size: 4.5rem;
+    }
+
+    @media screen and (max-width: 414px) {
+      font-size: 9vw;
+    }
+  }
+
+  &__info {
+    span {
+      color: var(--primaryColor);
+      font-weight: 600;
+    }
+
+    width: 100%;
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+    line-height: 2.7rem;
+
+    @media screen and (min-width: 768px) {
+      font-family: var(--mainFont);
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__info-tel {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__telephone {
+    font-family: var(--mainFontBold);
+    color: var(--primaryColor);
+  }
+
+  &__social-block {
+    margin-top: 4rem;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 400;
+      font-family: var(--mainFontBold);
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin: auto;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 20rem;
+
+    @media only screen and (max-width: 900px) {
+      max-width: 30rem;
+    }
+    @media only screen and (max-width: 768px) {
+      max-width: 50%;
+    }
+  }
+
+  &__social-item {
+    margin-top: 0.2rem;
+  }
+
+  &__social-link {
+    font-size: 3.5rem;
+    color: var(--mainBlack);
+    height: 100%;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 3rem;
+    }
+  }
+}

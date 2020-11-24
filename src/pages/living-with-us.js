@@ -1,18 +1,18 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
-import LivingWithUsStyledHero from "../components/LivingWithUsStyledHero"
+import DefaultStyledHero from "../components/DefaultStyledHero"
 import LivingWithUsBanner from "../components/LivingWithUsBanner/LivingWithUsBanner"
 import LivingWithUsBenefits from "../components/LivingWithUsBenefits/LivingWithUsBenefits"
 
 const LivingWithUsPage = ({ data }) => {
   return (
     <Layout>
-      <LivingWithUsStyledHero
+      <DefaultStyledHero
         opacity="true"
         img={data.homeHeroImage.childImageSharp.fluid}
       >
         <LivingWithUsBanner />
-      </LivingWithUsStyledHero>
+      </DefaultStyledHero>
       <LivingWithUsBenefits benefits={data.benefits.edges} />
     </Layout>
   )
