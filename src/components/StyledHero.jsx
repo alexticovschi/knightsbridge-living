@@ -27,6 +27,10 @@ export default styled(StyledHero)`
   margin-top: ${props => (props.marginTop ? "12rem" : 0)};
   top: ${props => (props.top ? "6rem" : 0)};
 
+  @media screen and (max-width: 950px) {
+    margin-top: 0;
+  }
+
   @media screen and (min-width: 550px) and (max-width: 670px) {
     min-height: ${props => (props.home ? "120vh" : "80vh")};
   }

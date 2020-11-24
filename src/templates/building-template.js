@@ -23,6 +23,8 @@ const BuildingTemplate = ({ data }) => {
       />
       <TransportAndConnections title="Transport & Connections" />
       <StyledHero
+        marginTop="true"
+        top="true"
         opacity="true"
         img={data.homeHeroImage2.childImageSharp.fluid}
       >
