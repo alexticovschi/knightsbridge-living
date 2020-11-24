@@ -1,0 +1,28 @@
+.team-card {
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 38rem min-content;
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: 22vw min-content;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-family: var(--mainFontBold);
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+    margin: 0;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.section-the-team {
+  &__subtitle {
+    grid-column: center-start / center-end;
+    font-size: 1.7rem;
+
+    margin: 0 auto;
+    padding: 0 9vw 3rem 9vw;
+    text-align: center;
+    margin-top: -1rem;
+
+    @media screen and (max-width: 600px) {
+      grid-column: full-start / full-end;
+
+      padding: 0 0 3rem 0;
+    }
+  }
+}
+.the-team {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-column-gap: 3rem;
+  grid-row-gap: 5rem;
+
+  @media screen and (max-width: 600px) {
+    grid-column: full-start / full-end;
+
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+}

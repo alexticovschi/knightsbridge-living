@@ -1,0 +1,57 @@
+.about-banner {
+  grid-column: center-start / center-end;
+
+  letter-spacing: var(--mainSpacing);
+  background-color: var(--mainWhite);
+  padding: 5rem;
+  border-radius: var(--mainBorderRadius);
+  width: 40vw;
+  margin: auto;
+
+  @media screen and (max-width: 767px) {
+    grid-column: full-start / full-end;
+    width: 100%;
+    padding: 3rem 2rem;
+    border-radius: 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1900px) {
+    width: 90%;
+  }
+
+  &__title {
+    font-family: var(--mainFontBold);
+    font-size: 4.8rem;
+    line-height: 5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: var(--mainSpacing);
+
+    @media screen and (max-width: 767px) {
+      font-size: 4.5rem;
+    }
+
+    @media screen and (max-width: 567px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 374px) {
+      font-size: 10.6vw;
+    }
+  }
+
+  &__info {
+    // width: 100%;
+    font-family: var(--mainFont);
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+    margin: auto 0;
+    text-align: left;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+  }
+}
