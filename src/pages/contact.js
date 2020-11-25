@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout"
 import DefaultStyledHero from "../components/DefaultStyledHero"
 import ContactBanner from "../components/ContactBanner/ContactBanner"
 import Directions from "../components/Directions/Directions"
+import { graphql } from "gatsby"
 
 const ContactPage = ({ data }) => {
   return (

@@ -6,6 +6,7 @@ import FloorPlan from "../components/FloorPlan/FloorPlan"
 import BuildingApartmentFeatures from "../components/BuildingApartmentFeatures/BuildingApartmentFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import ThreeApartmentsNoBg from "../components/ThreeApartmentsNoBg/ThreeApartmentsNoBg"
+import { graphql } from "gatsby"
 
 const ApartmentTemplate = ({ data }) => {
   return (

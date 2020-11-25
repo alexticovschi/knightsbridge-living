@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout"
 import AvailableApartments from "../components/AvailableApartments/AvailableApartments"
 import BenefitsSlider from "../components/BenefitsSlider/BenefitsSlider"
 import ExploreBuildings from "../components/ExploreBuildings/ExploreBuildings"
-
 import { graphql } from "gatsby"
 
 const Apartments = ({ data }) => {

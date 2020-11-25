@@ -8,7 +8,6 @@ import LifeStyle from "../components/LifeStyle/LifeStyle"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import Directions from "../components/Directions/Directions"
 import ThreeApartments from "../components/ThreeApartments/ThreeApartments"
-
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 

@@ -8,9 +8,7 @@ import BenefitsSlider from "../components/BenefitsSlider/BenefitsSlider"
 import FindIdealHome from "../components/FindIdealHome/FindIdealHome"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import Directions from "../components/Directions/Directions"
-
 import { Link } from "gatsby"
-
 import { graphql } from "gatsby"
 
 export const query = graphql`

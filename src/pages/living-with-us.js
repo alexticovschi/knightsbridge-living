@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout"
 import DefaultStyledHero from "../components/DefaultStyledHero"
 import LivingWithUsBanner from "../components/LivingWithUsBanner/LivingWithUsBanner"
 import LivingWithUsBenefits from "../components/LivingWithUsBenefits/LivingWithUsBenefits"
+import { graphql } from "gatsby"
 
 const LivingWithUsPage = ({ data }) => {
   return (
