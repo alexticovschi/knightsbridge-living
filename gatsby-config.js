@@ -9,6 +9,15 @@ require("dotenv").config({
 const path = require(`path`)
 
 module.exports = {
+  siteMetadata: {
+    title: "Knightsbridge Living",
+    description:
+      "We are Knightsbridge Living. We manage properties better than anyone else.We challenge you to compare our service to your current residential property management right now. You will save money, time and dramatically reduce the hassle factor, allowing you to focus on your investment strategy. We create amazing places to live, both inside and outside your four walls. We’re part of Knightsbridge Group, the award-winning developer behind Hyde Park. All just 10 minutes from Central London.",
+    author: "Alex Ticovschi",
+    twitterUsername: "@knightsbridgeliving",
+    image: "/images/hero.jpg",
+    siteUrl: "https://knightsbridgeliving.netlify.app",
+  },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
@@ -25,6 +34,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,

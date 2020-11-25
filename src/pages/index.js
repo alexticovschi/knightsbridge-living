@@ -5,6 +5,7 @@ import Banner from "../components/Banner/Banner"
 import Benefits from "../components/Benefits/Benefits"
 import HomeBuildings from "../components/HomeBuildings/HomeBuildings"
 import Reviews from "../components/Reviews/Reviews"
+import SEO from "../components/SEO"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -12,6 +13,10 @@ const HomePage = ({ data }) => {
   return (
     <main>
       <Layout>
+        <SEO
+          title="Brand new 1, 2 or 3 bedroom apartment to rent at Knightsbridge London"
+          description="Rent brand new studio, 1, 2 3 and 4 bedroom apartments at Knightsbridge with Knightsbridge Living. Book a viewing or request a call back today."
+        />
         <StyledHero
           home="true"
           opacity="true"
