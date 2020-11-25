@@ -9,11 +9,16 @@ import BuildingFeatures from "../components/BuildingFeatures/BuildingFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import BuildingReviews from "../components/BuildingReviews/BuildingReviews"
 import ExploreBuildings from "../components/ExploreBuildings/ExploreBuildings"
+import SEO from "../components/SEO"
 import { Link } from "gatsby"
 
 const BuildingTemplate = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title={data.building.title}
+        description={`Our ${data.building.title} building features beautiful and modern interiors creating relaxing, friendly 1, 2 and 3 bedroom apartments to rent in Knightsbridge. Book a viewing today.`}
+      />
       <BuildingSlider building={data.building} />
       <Apartments apartments={data.apartments} slug={data.building.slug} />
       <BuildingFeatures

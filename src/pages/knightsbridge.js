@@ -8,12 +8,17 @@ import LifeStyle from "../components/LifeStyle/LifeStyle"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import Directions from "../components/Directions/Directions"
 import ThreeApartments from "../components/ThreeApartments/ThreeApartments"
+import SEO from "../components/SEO"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 const Knightsbridge = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Living In Knightsbridge"
+        description="Knightsbridge is one of the most excitings neighbourhoods. A place to live, relax and be entertained right on your doorstep. And just 10 minutes from Central London."
+      />
       <StyledHero
         home="true"
         opacity="true"

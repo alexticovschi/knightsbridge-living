@@ -6,11 +6,16 @@ import FloorPlan from "../components/FloorPlan/FloorPlan"
 import BuildingApartmentFeatures from "../components/BuildingApartmentFeatures/BuildingApartmentFeatures"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import ThreeApartmentsNoBg from "../components/ThreeApartmentsNoBg/ThreeApartmentsNoBg"
+import SEO from "../components/SEO"
 import { graphql } from "gatsby"
 
 const ApartmentTemplate = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title={data.apartment.name}
+        description="Dream apartments by Knightsbridge Living. Search for spacious, brand new studios, 1, 2 or 3 bedroom apartment across a variety of different buildings, each with their own design style from Scandi style, rustic, or vintage style and more."
+      />
       <ApartmentHeroSlider
         apartment={data.apartment}
         buildingName={data.building.title}

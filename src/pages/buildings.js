@@ -8,6 +8,8 @@ import BenefitsSlider from "../components/BenefitsSlider/BenefitsSlider"
 import FindIdealHome from "../components/FindIdealHome/FindIdealHome"
 import TransportAndConnections from "../components/TransportAndConnections/TransportAndConnections"
 import Directions from "../components/Directions/Directions"
+import SEO from "../components/SEO"
+
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -33,6 +35,10 @@ export const query = graphql`
 const Buildings = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Buildings"
+        description="Find your dream home today. Search for a 1, 2 or 3 bed apartment across a variety of different buildings, each with their own design style from modern style, rustic, or vintage style and more."
+      />
       <BuildingsStyledHero
         buildings="true"
         opacity="true"
