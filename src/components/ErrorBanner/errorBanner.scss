@@ -1,0 +1,55 @@
+.error-banner {
+  text-align: left;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+
+  grid-column: center-start / center-end;
+  margin-top: -20rem;
+  padding: 0 10rem;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: full-start / full-end;
+    padding: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    grid-column: full-start / full-end;
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 960px) and (orientation: landscape) {
+    margin-top: 0;
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+    margin-top: 0;
+  }
+
+  &__btn-primary {
+    margin-right: 2rem;
+  }
+
+  &__title {
+    font-family: var(--mainFontBold);
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 550px) {
+      line-height: 6rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+
+      font-size: 6rem;
+    }
+
+    @media screen and (min-width: 1026px) {
+      font-size: 4.8rem;
+    }
+  }
+}
