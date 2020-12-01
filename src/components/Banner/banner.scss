@@ -47,9 +47,6 @@
     @media screen and (max-width: 550px) {
       text-align: center;
     }
-    @media screen and (min-width: 550px) {
-      line-height: 4rem;
-    }
   }
 
   &__info {
@@ -71,6 +68,7 @@
 
     &__title {
       font-size: 6rem;
+      line-height: 5rem;
     }
 
     &__info {
@@ -93,7 +91,6 @@
       display: flex;
       flex-direction: column;
       flex-basis: 100%;
-      // margin: 0 auto;
     }
   }
 }
