@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"
+import logo from "../../images/svg/logo1.svg"
+
 import "./footer.scss"
 
 const Footer = () => {
@@ -9,8 +11,7 @@ const Footer = () => {
       <div className="grid-container">
         <div className="footer__container">
           <div className="footer__logo">
-            <span className="footer__logo--first">Knightsbridge</span>
-            <span className="footer__logo--second">Living</span>
+            <img className="footer__logo--icon" src={logo} alt="" />
           </div>
           <ul className="footer__links">
             <li>

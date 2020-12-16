@@ -39,7 +39,7 @@ export const query = graphql`
           furnished
           price
           images {
-            fluid(quality: 90, maxWidth: 540) {
+            fluid(quality: 90, maxWidth: 440) {
               ...GatsbyContentfulFluid
             }
           }

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import logo from "../../../images/svg/logo1.svg"
 
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton"
 import "./Toolbar.scss"
@@ -10,8 +11,7 @@ const Toolbar = ({ isOpen, drawerClickHandler }) => (
       <nav className="toolbar__navigation">
         <div className="toolbar__logo">
           <Link to="/">
-            <span className="toolbar__logo--first">Knightsbridge</span>
-            <span className="toolbar__logo--second">Living</span>
+            <img className="toolbar__logo--icon" src={logo} alt="" />
           </Link>
         </div>
         <div className="spacer" />
